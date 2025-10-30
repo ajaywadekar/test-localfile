@@ -5,124 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>C Programming Questions Sheet — I Semester</title>
   <style>
-    :root{
-      --bg: #f7fbff;
-      --card: #ffffff;
-      --muted:#6b7280;
-      --accent:#0ea5a4;
-      --accent-dark:#0b7b79;
-      --border: #e6eef2;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    html,body{height:100%;margin:0;background:var(--bg);color:#0f172a}
-    .page{max-width:900px;margin:36px auto;padding:28px}
-    .card{background:var(--card);border-radius:12px;padding:26px;box-shadow:0 6px 20px rgba(2,6,23,0.06);border:1px solid var(--border)}
-    header{display:flex;align-items:flex-start;gap:18px}
-    .logo{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
-    h1{margin:0;font-size:20px}
-    p.lead{margin:6px 0 18px;color:var(--muted)}
-
-    /* question container */
-    #question-sheet{background:linear-gradient(180deg, rgba(14,165,164,0.03), transparent);padding:18px;border-radius:10px}
-    .section-title{font-weight:700;margin-top:18px;margin-bottom:8px;color:#0f172a}
-    ol.questions{padding-left:18px;margin:0}
-    ol.questions li{margin:8px 0;line-height:1.45}
-
-    /* two-column layout for larger screens */
-    @media(min-width:900px){
-      .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-      ol.questions{counter-reset:item}
-    }
-
-    /* small print footer */
-    footer{font-size:13px;color:var(--muted);margin-top:18px}
-
-    /* print friendly */
-    @media print{
-      body{background:white}
-      .page{box-shadow:none;margin:0}
-    }
+    body {font-family: Arial, sans-serif; background-color: #f7f9fb; margin: 0; padding: 20px; color: #222;}
+    .container {max-width: 900px; background: #fff; margin: auto; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
+    h1 {text-align: center; color: #0a5275;}
+    h2 {margin-top: 30px; color: #0a5275;}
+    ol {line-height: 1.6;}
+    li {margin: 6px 0;}
   </style>
 </head>
 <body>
-  <div class="page">
-    <div class="card">
-      <header>
-        <div class="logo">C</div>
-        <div>
-          <h1>C Programming Questions Sheet — I Semester</h1>
-          <p class="lead">Prepared By: Prof. Nadeem Khan, BIRT/S Bhopal</p>
-        </div>
-      </header>
+  <div class="container">
+    <h1>C Programming Questions Sheet</h1>
+    <h3>I - Semester</h3>
+    <p><strong>Prepared By:</strong> Prof. Ajay Wadekar, BIRT/S Bhopal | Mobile - 9713391500 </p>
 
-      <div id="question-sheet">
-        <p style="margin:0 0 12px;color:var(--muted)">Below is a clean, printable list of 52 beginner-to-intermediate C programming exercises. Use this for assignments, practice sheets, or classroom handouts.</p>
-
-        <!-- Questions split into two columns on wide screens -->
-        <div class="grid">
-          <ol class="questions">
-            <li>WAP to read length and width of a rectangle. Print the area.</li>
-            <li>WAP to read base and height of a triangle. Find the area.</li>
-            <li>Find the last digit of a given number.</li>
-            <li>WAP to read a number and find the last 2 digits of the given number.</li>
-            <li>WAP to read a number and find the last 3 digits of the given number.</li>
-            <li>WAP to read a number and remove the last digit of the given number.</li>
-            <li>WAP to read a number and remove the last 2 digits of the given number.</li>
-            <li>WAP to read a number and remove the last 3 digits of the given number.</li>
-            <li>WAP to find the bigger number between 2 numbers.</li>
-            <li>WAP to find the biggest number among 4 numbers.</li>
-            <li>WAP to read the radius of a circle and print the area.</li>
-            <li>WAP to find Simple Interest.</li>
-            <li>WAP to read basic, HRA, DA, and PF. Find the Net Salary.</li>
-            <li>WAP to read 2 numbers and swap the numbers.</li>
-            <li>WAP to swap 2 numbers without using a third variable.</li>
-            <li>WAP to swap 2 numbers using one line of code.</li>
-            <li>WAP to read a lowercase character and convert it to uppercase.</li>
-            <li>WAP to read an uppercase character and convert it to lowercase.</li>
-            <li>WAP to find the sum of N natural numbers without using any loop.</li>
-            <li>WAP to find the bigger number between 2 numbers without using if-else or any conditional operator.</li>
-            <li>WAP to find the smaller number between 2 numbers without using if-else or any conditional operator.</li>
-            <li>WAP to read a number and print whether it is odd or even without using the '%' symbol.</li>
-            <li>WAP to read a number and print whether it is positive or negative without comparing with 0.</li>
-            <li>WAP to read purchase rate and sales rate. Print whether it is profit or loss.</li>
-            <li>WAP to read a character and check whether it is lowercase or not.</li>
-            <li>WAP to read a character and check whether it is uppercase or not.</li>
-            <li>WAP to read a character and check whether it is a digit or not.</li>
-          </ol>
-
-          <ol start="29" class="questions">
-            <li>WAP to read 2 numbers and print whether they are equal or not.</li>
-            <li>WAP to read 2 numbers and print whether they are equal or not without using '==' operator.</li>
-            <li>WAP to read marks in 3 subjects and print whether the student is pass or fail.</li>
-            <li>WAP to read a character and print whether it is a vowel or consonant.</li>
-            <li>WAP to read 3 sides of a triangle and check whether a triangle can be formed or not.</li>
-            <li>WAP to read 3 angles of a triangle and print whether it is a right-angled triangle or not.</li>
-            <li>WAP to read 3 angles of a triangle and check whether the angles are valid or not.</li>
-            <li>WAP to read a year and print whether it is a leap year or not.</li>
-            <li>WAP to read age of a person and print whether the person is eligible to vote or not.</li>
-            <li>WAP to read 2 numbers and print whether the second number is a factor of the first or not.</li>
-            <li>WAP to demonstrate null else.</li>
-            <li>WAP to demonstrate null if.</li>
-            <li>WAP to read the temperature of water and print its state (solid, liquid, or gas).</li>
-            <li>WAP to read average marks of a student and print the grade.</li>
-            <li>WAP to read sales done by a salesman and print the commission based on the given table.</li>
-            <li>WAP to read power units consumed and find the bill amount based on the given table.</li>
-            <li>WAP to read age of a person and print message based on the age table (Infants, Kids, Teenagers, Youngsters, Middle Agers, Old Agers).</li>
-            <li>WAP to read marks in 3 subjects and print the grade (using switch-case).</li>
-            <li>WAP to read a single-digit number (1–10) and spell it using switch-case.</li>
-            <li>WAP to read a month number and print it in words using switch-case.</li>
-            <li>WAP to read a week number and print the corresponding weekday.</li>
-            <li>WAP to read 2 numbers and an operator; find the result based on the operator.</li>
-            <li>WAP to read a character and print whether it is a vowel or consonant using switch-case.</li>
-            <li>WAP to read a month number and print the season.</li>
-            <li>WAP to read a single-digit number and print whether it is odd or even using switch-case.</li>
-            <li>(Optional) Add any additional practice problems you prefer.
-            </li>
-          </ol>
-        </div>
-
-        <footer>For printing: use your browser's print feature (Ctrl/Cmd + P). This page is responsive and print-friendly.</footer>
-      </div>
+    <div id="question-list">
+      <ol>
+        <li>WAP to read length, width of a rectangle. Print the area.</li>
+        <li>WAP to read base, height of a triangle. Find the area.</li>
+        <li>Find the last digit of given number.</li>
+        <li>WAP to read a number, find the last 2 digits of given number.</li>
+        <li>WAP to read a number, find the last 3 digits of given number.</li>
+        <li>WAP to read a number, remove the last digit of given number.</li>
+        <li>WAP to read a number, remove the last 2 digits of given number.</li>
+        <li>WAP to read a number, remove the last 3 digits of given number.</li>
+        <li>WAP to find big number between 2 numbers.</li>
+        <li>WAP to find big number between 4 numbers.</li>
+        <li>WAP to read radius of a circle. Print the area.</li>
+        <li>WAP to find simple interest.</li>
+        <li>WAP to read basic, hra, da, pf. Find the net salary.</li>
+        <li>WAP to read 2 numbers. Swap the numbers.</li>
+        <li>WAP to swap 2 numbers without using third variable.</li>
+        <li>WAP to swap 2 numbers using one line of code.</li>
+        <li>WAP to read a lower case char. Convert it to upper case.</li>
+        <li>WAP to read a upper case char, convert it to lower case.</li>
+        <li>WAP to find the sum of N natural numbers without using any loop.</li>
+        <li>WAP to find big number between 2 numbers without using if-else or without using conditional statement.</li>
+        <li>WAP to find small number between 2 numbers without using if-else or without using conditional statement.</li>
+        <li>WAP to read a number. Print whether it is odd or even without using % symbol.</li>
+        <li>WAP to read a number. Print whether it is +ve or -ve without comparing with 0.</li>
+        <li>WAP to read purchase rate, sales rate. Print whether it is profit or loss.</li>
+        <li>WAP to read a char. Print whether it is lower case or not.</li>
+        <li>WAP to read a char. Print whether it is upper case or not.</li>
+        <li>WAP to read a char. Print whether it is digit or not.</li>
+        <li>WAP to read 2 numbers. Print whether they are equal or not.</li>
+        <li>WAP to read 2 numbers. Print whether they are equal or not without using == operator.</li>
+        <li>WAP to read marks in 3 subjects. Print whether the student is pass or fail.</li>
+        <li>WAP to read a character. Print whether it is vowel or consonant.</li>
+        <li>WAP to read 3 sides of a triangle. Print whether we can draw the triangle or not.</li>
+        <li>WAP to read 3 angles of a triangle. Print whether it is right angle triangle or not.</li>
+        <li>WAP to read 3 angles of a triangle. Print whether the angles are valid or not.</li>
+        <li>WAP to read year, print whether it is leap year or not.</li>
+        <li>WAP to read age of a person. Print whether the person is eligible to vote or not.</li>
+        <li>WAP to read 2 numbers. Print whether the second number is factor to first number or not.</li>
+        <li>WAP to demonstrate null else.</li>
+        <li>WAP to demonstrate null if.</li>
+        <li>WAP to read temperature of water. Print its form.</li>
+        <li>WAP to read avg marks of a student. Print the grade.</li>
+        <li>WAP to read sales done by a salesman. Print the commission based on the following table: <br> &lt;5000: 0, &lt;10000: 200, else: 400</li>
+        <li>WAP to read power units consumed. Find the bill amount based on the following table: <br> &lt;100: 2.52, &lt;200: 3.75, else: 5.10</li>
+        <li>WAP to read age of a person and print the message based on the following table: <br> &lt;3 Infants, &lt;16 Kids, &lt;21 Teenagers, &lt;28 Youngsters, &lt;40 Middle agers, else Old agers.</li>
+        <li>WAP to read marks in 3 subjects. Print the grade.</li>
+        <li>WAP to read a single digit number from 1 to 10. Spell it using switch.</li>
+        <li>WAP to read a month number. Print it in words using switch.</li>
+        <li>WAP to read a week number. Print it in words.</li>
+        <li>WAP to read 2 numbers, 1 operator. Find the result based on operator.</li>
+        <li>WAP to read a character. Print whether it is vowel or consonant.</li>
+        <li>WAP to read a month number. Print the season.</li>
+        <li>WAP to read a single digit number. Print whether it is odd or even using switch case.</li>
+      </ol>
     </div>
   </div>
 </body>
