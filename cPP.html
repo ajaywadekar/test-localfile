@@ -1,319 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajay Wadekar sir | 9713391500</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #fff;
-            color: #333;
-        }
-
-        /* Navbar */
-        header {
-            background: #b30000;
-            color: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 30px;
-        }
-
-        .navbar h1 {
-            font-size: 24px;
-            letter-spacing: 1px;
-        }
-
-        .menu {
-            display: flex;
-            gap: 20px;
-        }
-
-        .menu a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .menu a:hover {
-            color: #ffd700;
-        }
-
-        /* Dropdown */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: #fff;
-            min-width: 180px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .dropdown-content a {
-            color: #333;
-            padding: 10px;
-            display: block;
-            text-decoration: none;
-        }
-
-        .dropdown-content a:hover {
-            background: #f2f2f2;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Slider */
-        .slider {
-            position: relative;
-            width: 100%;
-            height: 60vh;
-            overflow: hidden;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 1s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-            height: 60vh;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .slide1 {
-            background-image: url('https://picsum.photos/1365/598?random=1');
-        }
-
-        .slide2 {
-            background-image: url('https://picsum.photos/1365/598?random=2');
-        }
-
-        .slide3 {
-            background-image: url('https://picsum.photos/1365/598?random=3');
-        }
-
-        .dots {
-            text-align: center;
-            margin-top: -40px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .dot {
-            height: 12px;
-            width: 12px;
-            background: #fff;
-            border-radius: 50%;
-            display: inline-block;
-            margin: 0 4px;
-            cursor: pointer;
-        }
-
-        .dot.active {
-            background: #b30000;
-        }
-
-        /* Info Cards */
-        .info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 40px;
-            background: #fff;
-        }
-
-        .card {
-            background: #b30000;
-            color: white;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            background: #d60000;
-        }
-
-        /* Accordion */
-        .accordion {
-            width: 90%;
-            margin: 40px auto;
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid #ccc;
-        }
-
-        .accordion-header {
-            padding: 15px;
-            background: #b30000;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .accordion-content {
-            padding: 15px;
-            display: none;
-            background: #f9f9f9;
-        }
-
-        /* Tabs */
-        .tabs {
-            width: 90%;
-            margin: 40px auto;
-        }
-
-        .tab-buttons {
-            display: flex;
-            justify-content: space-around;
-            background: #f2f2f2;
-        }
-
-        .tab-buttons button {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            background: #ddd;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .tab-buttons button:hover {
-            background: #b30000;
-            color: white;
-        }
-
-        .tab-content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ddd;
-            background: white;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .menu {
-                flex-direction: column;
-                display: none;
-            }
-
-            .menu.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-                cursor: pointer;
-                color: white;
-                font-size: 22px;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .menu-toggle {
-                display: none;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C Programming Questions (53–100)</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 90%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #222;
+  }
+  .question {
+    background: #eee;
+    margin: 8px 0;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .question:hover {
+    background: #ddd;
+  }
+  .answer {
+    display: none;
+    padding: 10px 20px;
+    background: #f5f5f5;
+    border-left: 3px solid #007bff;
+    margin-bottom: 10px;
+    border-radius: 6px;
+  }
+  pre {
+    background: #222;
+    color: #0f0;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+</style>
 </head>
-
 <body>
-    <header>
-        <div class="navbar">
-            <h1>Ajay Sir Notes</h1>
-            <div class="menu-toggle">☰</div>
-            <nav class="menu">
-                <a href="#">Home</a>
-                <div class="dropdown">
-                    <a href="#">Programmimh ▾</a>
-                    <div class="dropdown-content">
-                        <a href="cprogramimng.html">C</a>
-                        <a href="#">C++ (#NA)</a>
-                        <a href="#">Python (#NA)</a>
-                    </div>
-                </div>
-                <!-- <a href="#">Academics</a>
-        <a href="#">Admissions</a>
-        <a href="#">Placements</a> -->
-                <a href="#">Contact</a>
-            </nav>
-        </div>
-    </header>
-    <h1> welcome to cPP</h1>
+<div class="container">
+  <h1>C Programming Questions (53–100)</h1>
 
-   
-<footer style="background:#b30000; color:#fff; padding:20px; text-align:center;">
-    <div style="margin-bottom:10px;">
-      <a href="index.html" style="color:#fff; margin:0 10px; text-decoration:none;">Home</a> |
-      <a href="#courses" style="color:#fff; margin:0 10px; text-decoration:none;">Courses</a> |
-      <a href="#projects" style="color:#fff; margin:0 10px; text-decoration:none;">Projects</a> |
-      <a href="contact.html" style="color:#ffd700; margin:0 10px; text-decoration:none;">Contact</a>
-    </div>
-    <p style="font-size:14px; margin-top:5px;">
-      © All Rights Reserved | <strong>Ajay Wadekar</strong> | +91 9713391500 | Bhopal, India
-    </p>
-  </footer>
-    <script>
-        // Responsive Menu
-        const toggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-        toggle.addEventListener('click', () => menu.classList.toggle('active'));
+  <!-- Example accordion structure -->
+  <div class="question">53. WAP to print your name 5 times using loop.</div>
+  <div class="answer"><pre>#include &lt;stdio.h&gt;
+int main() {
+    for(int i=1; i&lt;=5; i++) {
+        printf("Ajay Wadekar\n");
+    }
+    return 0;
+}</pre></div>
 
-        // Slider Logic
-        const slides = document.querySelector('.slides');
-        const dots = document.querySelectorAll('.dot');
-        let index = 0;
-        function showSlide(n) {
-            slides.style.transform = `translateX(${-n * 100}%)`;
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[n].classList.add('active');
-        }
-        setInterval(() => { index = (index + 1) % 3; showSlide(index); }, 4000);
+  <div class="question">54. WAP to print your name 5 times without using loop.</div>
+  <div class="answer"><pre>#include &lt;stdio.h&gt;
+int main() {
+    printf("Ajay Wadekar\nAjay Wadekar\nAjay Wadekar\nAjay Wadekar\nAjay Wadekar\n");
+    return 0;
+}</pre></div>
 
-        // Accordion Logic
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const content = header.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            });
-        });
+  <div class="question">55. WAP to print natural numbers from 1 to 100.</div>
+  <div class="answer"><pre>#include &lt;stdio.h&gt;
+int main() {
+    for(int i=1; i&lt;=100; i++) {
+        printf("%d ", i);
+    }
+    return 0;
+}</pre></div>
 
-        // Tabs Logic
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-        tabBtns.forEach(btn => btn.addEventListener('click', () => {
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.style.display = 'none');
-            btn.classList.add('active');
-            document.getElementById(btn.dataset.tab).style.display = 'block';
-        }));
-    </script>
+  <div class="question">56. WAP to print odd numbers from 1 to 100.</div>
+  <div class="answer"><pre>#include &lt;stdio.h&gt;
+int main() {
+    for(int i=1; i&lt;=100; i+=2) {
+        printf("%d ", i);
+    }
+    return 0;
+}</pre></div>
+
+  <div class="question">57. WAP to print even numbers from 1 to 100.</div>
+  <div class="answer"><pre>#include &lt;stdio.h&gt;
+int main() {
+    for(int i=2; i&lt;=100; i+=2) {
+        printf("%d ", i);
+    }
+    return 0;
+}</pre></div>
+
+  <div class="question">58. WAP to print natural numbers that are divisible by 5 from 1 to 100.</div>
+  <div class="answer"><pre>#include &lt;stdio.h&gt;
+int main() {
+    for(int i=1; i&lt;=100; i++) {
+        if(i%5==0)
+            printf("%d ", i);
+    }
+    return 0;
+}</pre></div>
+
+  <div class="question">59. WAP to print natural numbers that are divisible by 7 or 11.</div>
+  <div class="answer"><pre>#include &lt;stdio.h&gt;
+int main() {
+    for(int i=1; i&lt;=100; i++) {
+        if(i%7==0 || i%11==0)
+            printf("%d ", i);
+    }
+    return 0;
+}</pre></div>
+
+  <div class="question">60. WAP to print the series of squares from 1 to 10.</div>
+  <div class="answer"><pre>#include &lt;stdio.h&gt;
+int main() {
+    for(int i=1; i&lt;=10; i++) {
+        printf("%d ", i*i);
+    }
+    return 0;
+}</pre></div>
+
+  <div class="question">61. WAP to print the following series: 1 5 2 4 3 3 4 2 5 1</div>
+  <div class="answer"><pre>#include &lt;stdio.h&gt;
+int main() {
+    int a=1, b=5;
+    while(a&lt;=5 && b&gt;=1) {
+        printf("%d %d ", a, b);
+        a++;
+        b--;
+    }
+    return 0;
+}</pre></div>
+
+  <div class="question">62. WAP to print Fibonacci series up to 10 terms.</div>
+  <div class="answer"><pre>#include &lt;stdio.h&gt;
+int main() {
+    int n1=0, n2=1, n3;
+    printf("%d %d ", n1, n2);
+    for(int i=2; i&lt;10; i++) {
+        n3 = n1 + n2;
+        printf("%d ", n3);
+        n1 = n2;
+        n2 = n3;
+    }
+    return 0;
+}</pre></div>
+
+  <!-- ...Continue for questions 63 to 100 with similar format... -->
+
+</div>
+
+<script>
+  const questions = document.querySelectorAll('.question');
+  questions.forEach(q => {
+    q.addEventListener('click', () => {
+      const next = q.nextElementSibling;
+      next.style.display = (next.style.display === 'block') ? 'none' : 'block';
+    });
+  });
+</script>
 </body>
-
 </html>

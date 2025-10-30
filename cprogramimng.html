@@ -1,318 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajay Wadekar sir | 9713391500</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>C Programming Questions Sheet — I Semester</title>
+  <style>
+    :root{
+      --bg: #f7fbff;
+      --card: #ffffff;
+      --muted:#6b7280;
+      --accent:#0ea5a4;
+      --accent-dark:#0b7b79;
+      --border: #e6eef2;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:#0f172a}
+    .page{max-width:900px;margin:36px auto;padding:28px}
+    .card{background:var(--card);border-radius:12px;padding:26px;box-shadow:0 6px 20px rgba(2,6,23,0.06);border:1px solid var(--border)}
+    header{display:flex;align-items:flex-start;gap:18px}
+    .logo{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 18px;color:var(--muted)}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #fff;
-            color: #333;
-        }
+    /* question container */
+    #question-sheet{background:linear-gradient(180deg, rgba(14,165,164,0.03), transparent);padding:18px;border-radius:10px}
+    .section-title{font-weight:700;margin-top:18px;margin-bottom:8px;color:#0f172a}
+    ol.questions{padding-left:18px;margin:0}
+    ol.questions li{margin:8px 0;line-height:1.45}
 
-        /* Navbar */
-        header {
-            background: #b30000;
-            color: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
+    /* two-column layout for larger screens */
+    @media(min-width:900px){
+      .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+      ol.questions{counter-reset:item}
+    }
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 30px;
-        }
+    /* small print footer */
+    footer{font-size:13px;color:var(--muted);margin-top:18px}
 
-        .navbar h1 {
-            font-size: 24px;
-            letter-spacing: 1px;
-        }
-
-        .menu {
-            display: flex;
-            gap: 20px;
-        }
-
-        .menu a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .menu a:hover {
-            color: #ffd700;
-        }
-
-        /* Dropdown */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: #fff;
-            min-width: 180px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .dropdown-content a {
-            color: #333;
-            padding: 10px;
-            display: block;
-            text-decoration: none;
-        }
-
-        .dropdown-content a:hover {
-            background: #f2f2f2;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Slider */
-        .slider {
-            position: relative;
-            width: 100%;
-            height: 60vh;
-            overflow: hidden;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 1s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-            height: 60vh;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .slide1 {
-            background-image: url('https://picsum.photos/1365/598?random=1');
-        }
-
-        .slide2 {
-            background-image: url('https://picsum.photos/1365/598?random=2');
-        }
-
-        .slide3 {
-            background-image: url('https://picsum.photos/1365/598?random=3');
-        }
-
-        .dots {
-            text-align: center;
-            margin-top: -40px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .dot {
-            height: 12px;
-            width: 12px;
-            background: #fff;
-            border-radius: 50%;
-            display: inline-block;
-            margin: 0 4px;
-            cursor: pointer;
-        }
-
-        .dot.active {
-            background: #b30000;
-        }
-
-        /* Info Cards */
-        .info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 40px;
-            background: #fff;
-        }
-
-        .card {
-            background: #b30000;
-            color: white;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            background: #d60000;
-        }
-
-        /* Accordion */
-        .accordion {
-            width: 90%;
-            margin: 40px auto;
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid #ccc;
-        }
-
-        .accordion-header {
-            padding: 15px;
-            background: #b30000;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .accordion-content {
-            padding: 15px;
-            display: none;
-            background: #f9f9f9;
-        }
-
-        /* Tabs */
-        .tabs {
-            width: 90%;
-            margin: 40px auto;
-        }
-
-        .tab-buttons {
-            display: flex;
-            justify-content: space-around;
-            background: #f2f2f2;
-        }
-
-        .tab-buttons button {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            background: #ddd;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .tab-buttons button:hover {
-            background: #b30000;
-            color: white;
-        }
-
-        .tab-content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ddd;
-            background: white;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .menu {
-                flex-direction: column;
-                display: none;
-            }
-
-            .menu.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-                cursor: pointer;
-                color: white;
-                font-size: 22px;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .menu-toggle {
-                display: none;
-            }
-        }
-    </style>
+    /* print friendly */
+    @media print{
+      body{background:white}
+      .page{box-shadow:none;margin:0}
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <div class="navbar">
-            <h1>Ajay Sir Notes</h1>
-            <div class="menu-toggle">☰</div>
-            <nav class="menu">
-                <a href="#">Home</a>
-                <div class="dropdown">
-                    <a href="#">Programmimh ▾</a>
-                    <div class="dropdown-content">
-                        <a href="cprogramimng.html">C</a>
-                        <a href="#">C++ (#NA)</a>
-                        <a href="#">Python (#NA)</a>
-                    </div>
-                </div>
-                <!-- <a href="#">Academics</a>
-        <a href="#">Admissions</a>
-        <a href="#">Placements</a> -->
-                <a href="#">Contact</a>
-            </nav>
+  <div class="page">
+    <div class="card">
+      <header>
+        <div class="logo">C</div>
+        <div>
+          <h1>C Programming Questions Sheet — I Semester</h1>
+          <p class="lead">Prepared By: Prof. Nadeem Khan, BIRT/S Bhopal</p>
         </div>
-    </header>
+      </header>
 
-   
-<footer style="background:#b30000; color:#fff; padding:20px; text-align:center;">
-    <div style="margin-bottom:10px;">
-      <a href="index.html" style="color:#fff; margin:0 10px; text-decoration:none;">Home</a> |
-      <a href="#courses" style="color:#fff; margin:0 10px; text-decoration:none;">Courses</a> |
-      <a href="#projects" style="color:#fff; margin:0 10px; text-decoration:none;">Projects</a> |
-      <a href="contact.html" style="color:#ffd700; margin:0 10px; text-decoration:none;">Contact</a>
+      <div id="question-sheet">
+        <p style="margin:0 0 12px;color:var(--muted)">Below is a clean, printable list of 52 beginner-to-intermediate C programming exercises. Use this for assignments, practice sheets, or classroom handouts.</p>
+
+        <!-- Questions split into two columns on wide screens -->
+        <div class="grid">
+          <ol class="questions">
+            <li>WAP to read length and width of a rectangle. Print the area.</li>
+            <li>WAP to read base and height of a triangle. Find the area.</li>
+            <li>Find the last digit of a given number.</li>
+            <li>WAP to read a number and find the last 2 digits of the given number.</li>
+            <li>WAP to read a number and find the last 3 digits of the given number.</li>
+            <li>WAP to read a number and remove the last digit of the given number.</li>
+            <li>WAP to read a number and remove the last 2 digits of the given number.</li>
+            <li>WAP to read a number and remove the last 3 digits of the given number.</li>
+            <li>WAP to find the bigger number between 2 numbers.</li>
+            <li>WAP to find the biggest number among 4 numbers.</li>
+            <li>WAP to read the radius of a circle and print the area.</li>
+            <li>WAP to find Simple Interest.</li>
+            <li>WAP to read basic, HRA, DA, and PF. Find the Net Salary.</li>
+            <li>WAP to read 2 numbers and swap the numbers.</li>
+            <li>WAP to swap 2 numbers without using a third variable.</li>
+            <li>WAP to swap 2 numbers using one line of code.</li>
+            <li>WAP to read a lowercase character and convert it to uppercase.</li>
+            <li>WAP to read an uppercase character and convert it to lowercase.</li>
+            <li>WAP to find the sum of N natural numbers without using any loop.</li>
+            <li>WAP to find the bigger number between 2 numbers without using if-else or any conditional operator.</li>
+            <li>WAP to find the smaller number between 2 numbers without using if-else or any conditional operator.</li>
+            <li>WAP to read a number and print whether it is odd or even without using the '%' symbol.</li>
+            <li>WAP to read a number and print whether it is positive or negative without comparing with 0.</li>
+            <li>WAP to read purchase rate and sales rate. Print whether it is profit or loss.</li>
+            <li>WAP to read a character and check whether it is lowercase or not.</li>
+            <li>WAP to read a character and check whether it is uppercase or not.</li>
+            <li>WAP to read a character and check whether it is a digit or not.</li>
+          </ol>
+
+          <ol start="29" class="questions">
+            <li>WAP to read 2 numbers and print whether they are equal or not.</li>
+            <li>WAP to read 2 numbers and print whether they are equal or not without using '==' operator.</li>
+            <li>WAP to read marks in 3 subjects and print whether the student is pass or fail.</li>
+            <li>WAP to read a character and print whether it is a vowel or consonant.</li>
+            <li>WAP to read 3 sides of a triangle and check whether a triangle can be formed or not.</li>
+            <li>WAP to read 3 angles of a triangle and print whether it is a right-angled triangle or not.</li>
+            <li>WAP to read 3 angles of a triangle and check whether the angles are valid or not.</li>
+            <li>WAP to read a year and print whether it is a leap year or not.</li>
+            <li>WAP to read age of a person and print whether the person is eligible to vote or not.</li>
+            <li>WAP to read 2 numbers and print whether the second number is a factor of the first or not.</li>
+            <li>WAP to demonstrate null else.</li>
+            <li>WAP to demonstrate null if.</li>
+            <li>WAP to read the temperature of water and print its state (solid, liquid, or gas).</li>
+            <li>WAP to read average marks of a student and print the grade.</li>
+            <li>WAP to read sales done by a salesman and print the commission based on the given table.</li>
+            <li>WAP to read power units consumed and find the bill amount based on the given table.</li>
+            <li>WAP to read age of a person and print message based on the age table (Infants, Kids, Teenagers, Youngsters, Middle Agers, Old Agers).</li>
+            <li>WAP to read marks in 3 subjects and print the grade (using switch-case).</li>
+            <li>WAP to read a single-digit number (1–10) and spell it using switch-case.</li>
+            <li>WAP to read a month number and print it in words using switch-case.</li>
+            <li>WAP to read a week number and print the corresponding weekday.</li>
+            <li>WAP to read 2 numbers and an operator; find the result based on the operator.</li>
+            <li>WAP to read a character and print whether it is a vowel or consonant using switch-case.</li>
+            <li>WAP to read a month number and print the season.</li>
+            <li>WAP to read a single-digit number and print whether it is odd or even using switch-case.</li>
+            <li>(Optional) Add any additional practice problems you prefer.
+            </li>
+          </ol>
+        </div>
+
+        <footer>For printing: use your browser's print feature (Ctrl/Cmd + P). This page is responsive and print-friendly.</footer>
+      </div>
     </div>
-    <p style="font-size:14px; margin-top:5px;">
-      © All Rights Reserved | <strong>Ajay Wadekar</strong> | +91 9713391500 | Bhopal, India
-    </p>
-  </footer>
-    <script>
-        // Responsive Menu
-        const toggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-        toggle.addEventListener('click', () => menu.classList.toggle('active'));
-
-        // Slider Logic
-        const slides = document.querySelector('.slides');
-        const dots = document.querySelectorAll('.dot');
-        let index = 0;
-        function showSlide(n) {
-            slides.style.transform = `translateX(${-n * 100}%)`;
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[n].classList.add('active');
-        }
-        setInterval(() => { index = (index + 1) % 3; showSlide(index); }, 4000);
-
-        // Accordion Logic
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const content = header.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-
-        // Tabs Logic
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-        tabBtns.forEach(btn => btn.addEventListener('click', () => {
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.style.display = 'none');
-            btn.classList.add('active');
-            document.getElementById(btn.dataset.tab).style.display = 'block';
-        }));
-    </script>
+  </div>
 </body>
-
 </html>
